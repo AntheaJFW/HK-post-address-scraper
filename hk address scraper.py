@@ -2,7 +2,6 @@
 """
 Created on Thu Jun 21 00:03:27 2018
 
-@author: Ji Fong
 """
 # Hong Kong post scraper
 import pandas as pd
