@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 import time
 
 driver = webdriver.Chrome(executable_path="chromedriver.exe")
-allstreetnames = pd.read_excel('allstreetnames2.xlsx')
+allstreetnames = pd.read_excel('allstreetnames.xlsx')
 
 driver.get('https://www.hongkongpost.hk/correct_addressing/index.jsp?lang=en_US')
 def runthrough(term):
