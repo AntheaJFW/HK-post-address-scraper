@@ -9,8 +9,8 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
 
-driver = webdriver.Chrome(executable_path="d:/chromedriver.exe")
-allstreetnames = pd.read_excel('d:/allstreetnames2.xlsx')
+driver = webdriver.Chrome(executable_path="chromedriver.exe")
+allstreetnames = pd.read_excel('allstreetnames2.xlsx')
 
 driver.get('https://www.hongkongpost.hk/correct_addressing/index.jsp?lang=en_US')
 def runthrough(term):
@@ -61,7 +61,7 @@ for i in allstreetnames['Chinese Street Name']:
       driver.find_element_by_id('rdreset2').click()
 
 
-wb = pd.ExcelWriter('C:/Users/Ji Fong/Google Drive/Alladdresspart2.xlsx')
+wb = pd.ExcelWriter('Alladdresses.xlsx')
 alldfs = pd.concat(listofdfs2)
 alldfs.to_excel(wb)
 wb.save()
